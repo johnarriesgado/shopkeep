@@ -5,6 +5,7 @@ development:
   host: localhost
   username: kopeeeman
   password: kopeeeman
+  database: shopkeep
 
 test:
   adapter: postgresql
