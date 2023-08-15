@@ -3,14 +3,14 @@
 /* Import Roboto font styles */
 @font-face {
   font-family: 'Roboto';
-  src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+  src: asset-url('Roboto-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/assets/fonts/Roboto-Bold.ttf') format('truetype');
+  src: asset-url('Roboto-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -22,7 +22,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 // Login - Signup
 body.login-page {
-  background-image: url('/assets/images/login-image.png'); /* Background image */
+  background-image: asset-url('login-image.png'); /* Background image */
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -108,7 +108,7 @@ input[type="password"] {
 }
 
 .signup-page {
-  background-image: url('/assets/images/signup-background.jpg'); /* Background image */
+  background-image: asset-url('login-image.jpg'); /* Background image */
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -407,7 +407,7 @@ input[type="password"] {
 }
 
 .search-button::before {
-  background: url('/assets/images/icon.png') center/contain no-repeat;
+  background: asset-url('icon.png') center/contain no-repeat;
   content: ''; /* Create an empty content */
   display: block;
   width: 10px;
