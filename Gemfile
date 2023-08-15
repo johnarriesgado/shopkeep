@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.6.5p114"
+ruby "2.5.1"
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
