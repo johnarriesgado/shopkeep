@@ -13,3 +13,9 @@ development:
 test:
   <<: *default
   database: shopkeep_test
+
+production:
+  <<: *default
+  database: shopkeep_production
+  username: shopkeep
+  password: <%= ENV["SHOPKEEP_DATABASE_PASSWORD"] %>
