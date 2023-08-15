@@ -1,27 +1,25 @@
-default: &default
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: kopeeeman
+  password: kopeeeman
+
+test:
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: <%= ENV['DATABASE_HOST'] %>
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
-
-
-development:
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: kopeeeman
-  password: kopeeeman
-  host: localhost
-
-test:
-  <<: *default
   database: shopkeep_test
 
 production:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  database: shopkeep_production
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV['DATABASE_HOST'] %>
   username: shopkeep
   password: <%= ENV["SHOPKEEP_DATABASE_PASSWORD"] %>
+  database: shopkeep_production
