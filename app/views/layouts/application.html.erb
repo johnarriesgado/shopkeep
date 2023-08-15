@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopkeep</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<header class="sticky-header">
+  <div class="logo">
+    <%= image_tag 'icon.png', class: 'logo-image' %> <span class="logo-text">Shopkeep</span>
+  </div>
+  <div class="header-actions">
+    <%= link_to 'Find Jobs!', jobs_path, class: 'header-link' %>
+    <button class="notification-button">
+      <%= image_tag 'notif.png', class: 'notif-button-image' %>
+    </button>
+    <div class="dropdown">
+      <button class="dropdown-button">
+        <%= image_tag 'duki.jpeg', class: 'profile-button-image' %>
+      </button>
+      <div class="dropdown-content">
+        <%= image_tag 'duki.jpeg', class: 'dropdown-profile-button-image' %>
+        <span class="dropdown-profile-name">Denzel Poginess</span>
+        <ul>
+          <li><%= link_to 'User Profile', my_profile_path %></li>
+          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<%= yield %>
+
+</html>

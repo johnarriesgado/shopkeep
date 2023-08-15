@@ -1,0 +1,28 @@
+<body class="login-page">
+  <div class="login-container">
+    <div class="login-form-container">
+      <div class="login-header">
+        <%= image_tag 'icon.png', class: 'icon' %>
+        <h1>Shopkeep</h1>
+      </div>
+
+      <% if resource.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(resource.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% resource.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'login-form' }) do |f| %>
+        <%= f.email_field :email, placeholder: 'Email' %>
+        <%= f.password_field :password, placeholder: 'Password' %>
+        <%= f.submit 'Log In', class: 'login-signup-button' %>
+      <% end %>
+      <p class="signup-link">Want to join us? <%= link_to 'Join Now!', new_user_registration_path %></p>
+    </div>
+  </div>
+</body>

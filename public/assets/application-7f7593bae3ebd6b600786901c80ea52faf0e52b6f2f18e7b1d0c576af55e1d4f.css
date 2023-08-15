@@ -1,0 +1,341 @@
+/* app/assets/stylesheets/custom.css.scss */
+/* Import Roboto font styles */
+@font-face {
+  font-family: 'Roboto';
+  src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+/* Apply Roboto font to body and headings */
+/* line 20, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 25, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+body.login-page {
+  background-image: url("login-image.png");
+  /* Background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* line 36, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Semi-transparent white background */
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+  width: 320px;
+}
+
+/* line 45, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.login-form-container {
+  flex: 1;
+  padding: 30px;
+}
+
+/* line 50, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* line 55, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 62, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+h1 {
+  font-size: 28px;
+  /* Adjust font size */
+  margin-top: 5px;
+  /* Adjust top margin */
+  color: #1aa7ec;
+  /* Theme color: #1aa7ec */
+}
+
+/* line 68, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.login-form {
+  margin-bottom: 20px;
+}
+
+/* line 72, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+input[type="email"],
+input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 81, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.login-signup-button {
+  background-color: #1aa7ec;
+  /* Theme color: #1aa7ec */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+/* line 91, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.forgot-password-link {
+  color: #1aa7ec;
+  /* Theme color: #1aa7ec */
+  cursor: pointer;
+}
+
+/* line 96, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.signup-link {
+  color: #1aa7ec;
+  /* Theme color: #1aa7ec */
+  cursor: pointer;
+}
+
+/* line 101, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.signup-page {
+  background-image: url("signup-background.jpg");
+  /* Background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* line 112, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.signup-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Semi-transparent white background */
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+  width: 320px;
+}
+
+/* line 122, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* line 132, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.logo-image {
+  max-height: 30px;
+}
+
+/* line 136, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.logo-text {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* line 141, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.logout-button {
+  color: #1aa7ec;
+  text-decoration: none;
+}
+
+/* line 146, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.job-listings {
+  margin-top: 60px;
+  /* To push the job listings below the sticky header */
+}
+
+/* line 150, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.job-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* line 156, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.banner-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #1aa7ec;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+  /* Adjust as needed */
+  padding: 10px;
+  color: white;
+}
+
+/* line 168, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.announcement-banner {
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+/* line 174, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.search-container {
+  margin-top: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* line 181, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 187, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* line 194, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.search-button {
+  background: url("icon.png") center/contain no-repeat;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 202, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.job-list-container {
+  background-color: white;
+  border-radius: 8px;
+  margin: 10px auto;
+  max-width: 800px;
+  /* Adjust as needed */
+  padding: 10px;
+  /* Add the border styles */
+  border: 2px solid #cfe3ec;
+  /* Border color: #cfe3ec */
+}
+
+/* line 213, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.no-jobs {
+  text-align: center;
+  margin-top: 10px;
+  color: #999;
+}
+
+/* line 219, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* line 226, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.content-container {
+  display: flex;
+  justify-content: center;
+  /* Center the content horizontally */
+  align-items: flex-start;
+  margin-top: 20px;
+  max-width: 65%;
+  /* Limit the width to 80% of the screen width */
+  margin: 0 auto;
+  /* Center the container horizontally */
+}
+
+/* line 235, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.left-section {
+  flex: 1;
+  padding-right: 20px;
+  /* Add some spacing between sections */
+}
+
+/* line 240, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.right-section {
+  flex: 1;
+  padding-left: 20px;
+  /* Add some spacing between sections */
+  max-width: 250px;
+}
+
+/* line 246, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.profile-box {
+  margin-top: 20px;
+  background-color: white;
+  border: 2px solid #cfe3ec;
+  /* Border color: #cfe3ec */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 200px;
+}
+
+/* line 256, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* line 262, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.profile-text {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* line 267, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.preferences-box {
+  margin-top: 20px;
+  margin: 20px auto;
+}
+
+/* line 272, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.preferences-box h3 {
+  margin-bottom: 10px;
+  max-width: 200px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

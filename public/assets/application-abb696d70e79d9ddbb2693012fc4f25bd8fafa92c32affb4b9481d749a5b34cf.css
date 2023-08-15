@@ -1,0 +1,154 @@
+/* app/assets/stylesheets/custom.css.scss */
+/* Import Roboto font styles */
+@font-face {
+  font-family: 'Roboto';
+  src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+/* Apply Roboto font to body and headings */
+/* line 20, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 24, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+body.login-page {
+  background-image: url("login-image.png");
+  /* Background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* line 35, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Semi-transparent white background */
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+  width: 320px;
+}
+
+/* line 44, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.login-form-container {
+  flex: 1;
+  padding: 30px;
+}
+
+/* line 49, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* line 54, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 61, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+h1 {
+  font-size: 28px;
+  /* Adjust font size */
+  margin-top: 5px;
+  /* Adjust top margin */
+  color: #1aa7ec;
+  /* Theme color: #1aa7ec */
+}
+
+/* line 67, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.login-form {
+  margin-bottom: 20px;
+}
+
+/* line 71, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+input[type="email"],
+input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 80, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+input[type="submit"] {
+  background-color: #1aa7ec;
+  /* Theme color: #1aa7ec */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+/* line 90, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.forgot-password-link {
+  color: #1aa7ec;
+  /* Theme color: #1aa7ec */
+  cursor: pointer;
+}
+
+/* line 95, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.signup-link {
+  color: #1aa7ec;
+  /* Theme color: #1aa7ec */
+  cursor: pointer;
+}
+
+/* line 100, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.signup-page {
+  background-image: url("signup-background.jpg");
+  /* Background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* line 111, /Users/kopeeeman/Documents/Projects/shopkeep/app/assets/stylesheets/custom.css.scss */
+.signup-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Semi-transparent white background */
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+  width: 320px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

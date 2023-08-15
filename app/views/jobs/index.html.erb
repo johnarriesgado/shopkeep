@@ -1,0 +1,83 @@
+<body>
+  <div class="content-container">
+    <div class="left-section">
+      <div class="announcement-block">
+        <div class="announcement-content">
+          <h1>Get noticed quickly!</h1>
+          <p>Join Shopkeep Plus to start each month fresh with more options! You'll get a lot of other perks too! Join now to unlock new features to help you grow your network and market your skills.</p>
+          <button class="announcement-button">Learn More!</button>
+        </div>
+        <div class="announcement-image">
+          <%= image_tag 'announcement.jpeg', class: 'circle-image' %> 
+        </div>
+      </div>
+
+      <div class="search-container">
+        <%= form_tag jobs_index_path, method: :get, class: 'search-form' do %>
+          <%= text_field_tag :search, params[:search], placeholder: 'Carpenter etc...', class: 'search-input' %>
+          <%= submit_tag 'Search', class: 'search-button custom-search-button' %>
+        <% end %>
+      </div>
+
+      <div class="job-list-container">
+        <% if @jobs.empty? %>
+          <p class="no-jobs">No jobs at the moment.</p>
+        <% else %>
+          <% @jobs.each do |job| %>
+            <div class="job-item">
+              <h2><%= job.title %></h2>
+              <h5>Offers: $<%= job.salary %></h5>
+              <% if job.description.length > 300 %>
+                <p class="full-description"><%= job.description.truncate(300) %></p>
+                <p class="remaining-text hidden"><%= job.description %></p>
+                <p class="expand-button">More</p>
+                <p class="collapse-button hidden">Less</p>
+              <% else %>
+                <p class="full-description"><%= job.description %>
+              <% end %>
+              <div class="apply-button-container">
+                <div class="apply-button-container">
+                  <%= link_to job_path(job), class: 'apply-button', data: { job: job.to_json } do %>
+                    Apply!
+                  <% end %>
+                </div>
+              </div>
+              <div class="modal-container" id="jobModalContainer_<%= job.id %>">
+                <div class="modal-background" id="modalBackground"></div>
+                <div class="modal-content" id="modalContent">
+                  <div class="modal-header">
+                    <button type="button" class="close-button" id="modalCloseButton">&times;</button>
+                    <h5 class="modal-title" id="jobModalLabel"><%= job.title %></h5>
+                  </div>
+                  
+                  <div class="modal-body" id="modalBody">
+                    <h5>Offers: $<%= job.salary %></h5>
+                    <p><%= job.description %></p>
+                  </div>
+                  <div class="modal-footer" id="modalFooter">
+                    <!-- Footer content will be populated here -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <div class="profile-box">
+        <%= image_tag 'duki.jpeg', class: 'profile-image' %> 
+        <p class="profile-text">Denzel Poginess</p>
+        <p class="profile-subtext">Sexy Man</p>
+      </div>
+      <div class="preferences-box">
+        <h3>Preferences</h3>
+        <%= text_field_tag 'work_title', nil, placeholder: 'Work Title', class: 'filter-input' %>
+        <%= text_field_tag 'near_me', nil, placeholder: 'Whats Near Me', class: 'filter-input' %>
+        <%= text_field_tag 'job_category', nil, placeholder: 'Job Category', class: 'filter-input' %>
+      </div>
+
+    </div>
+  </div>
+</body>

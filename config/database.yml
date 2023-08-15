@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: kopeeeman
+  password: kopeeeman
+  host: localhost
+
+development:
+  <<: *default
+  database: shopkeep
+
+test:
+  <<: *default
+  database: shopkeep_test
