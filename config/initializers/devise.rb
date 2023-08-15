@@ -304,7 +304,7 @@ Devise.setup do |config|
   # Note: These might become the new default in future versions of Devise.
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other
-
+  config.secret_key = 'd4e302373bd0173db05d0992b2cbc60b098e71dfff1a79a0d846b6bec9fdbfdc9702945154d51b687a57510018e8e0b3abaf27b6f27110ddd976ba03babb9453'
   # ==> Configuration for :registerable
 
   # When set to false, does not sign a user in automatically after their password is
